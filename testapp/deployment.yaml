@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: testapp-pod
+  template:
+    metadata:
+      labels:
+        app: testapp-pod
+    spec:
+      containers:
+      - name: testapp-container
+        image: testapp:v8
+        env:
+          - name: DB_CONN_STRING
+            valueFrom:
+              configMapKeyRef:
+                name: testapp-config
+                key: db-conn-string
+          - name: API_URL
+            valueFrom:
+              configMapKeyRef:
+                name: testapp-config
+                key: api-url
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000
+      
