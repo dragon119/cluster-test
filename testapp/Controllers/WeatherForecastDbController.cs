@@ -36,7 +36,7 @@ namespace testapp.Controllers;
             //     .Build();
             //var hostname = configuration.GetSection("host").Value;
 
-            string forecast = "No DB access";
+            string forecast = "List of tables: ";
             //var connectionString = "Host=127.0.0.1;Username=postgres;Password=bubble7;Database=postgres";
             var connectionString = Environment.GetEnvironmentVariable("DB_CONN_STRING");
             
