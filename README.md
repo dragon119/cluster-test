@@ -3,7 +3,7 @@ This is a simple .NET WebAPI application to validate our k8s clusters.
 
 # Deployment
 1. docker pull mvptest.azurecr.io/testapp:latest
-2. push the image to JFrog (artifactory-pd-infra.aks.aze1.cloud.geico.net/mvp-billing-container-all/testapp:latest)
+2. push the image to JFrog 
 3. Modify image path at deployment.yaml
 4. Modify the connection string and API URL at config.yaml accordingly
 5. Apply config.yaml
