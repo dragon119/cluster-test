@@ -6,3 +6,5 @@ data:
   # property-like keys; each key maps to a simple value
   db-conn-string: "Host=;Username=;Password=;Database=postgres"
   api-url: "http://api.weatherapi.com/v1/current.json?key=eed42ae6f6814eaa9bb14944231412&q=London&aqi=no"
+  kafka-bootstrap-server: "my-cluster:9092"
+  kafka-topic: "weather"
