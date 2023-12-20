@@ -31,13 +31,9 @@ namespace testapp.Controllers;
         //public WeatherForecast Get()
         public async Task<string> Get()
         {
-            // var configuration = new ConfigurationBuilder()
-            //     .AddEnvironmentVariables()
-            //     .Build();
-            //var hostname = configuration.GetSection("host").Value;
 
             string forecast = "List of tables: ";
-            //var connectionString = "Host=127.0.0.1;Username=postgres;Password=bubble7;Database=postgres";
+
             var connectionString = Environment.GetEnvironmentVariable("DB_CONN_STRING");
             
             var dataSource = NpgsqlDataSource.Create(connectionString);   
@@ -48,8 +44,8 @@ namespace testapp.Controllers;
                 forecast += reader.GetString(0);
             }
             return forecast;
-            // WeatherForecastContext db = new WeatherForecastContext();
             
+            // WeatherForecastContext db = new WeatherForecastContext();
             // return db.weatherforecast.SingleOrDefault(w => w.id == 1);  
         }
     }
