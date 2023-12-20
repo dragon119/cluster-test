@@ -5,7 +5,7 @@ This is a simple .NET WebAPI application to validate our k8s clusters.
 1. docker pull mvptest.azurecr.io/testapp:latest
 2. push the image to JFrog 
 3. Modify image path at deployment.yaml
-4. Modify the connection string and API URL at config.yaml accordingly
+4. Modify the connection string, API URL and Kafka endpoint (bootstrap service name:port) at config.yaml accordingly
 5. Apply config.yaml
 6. Apply deployment-with-config.yaml
 7. Apply Service-node-port.yaml
@@ -17,7 +17,7 @@ This is a simple .NET WebAPI application to validate our k8s clusters.
   htttp://Node-IP:3000/WeatherForecastApi
 3. Access DB   
    htttp://Node-IP:3000/WeatherForecastDb
-4. Access Kafka (WIP)   
+4. Access Kafka
    htttp://Node-IP:3000/WeatherForecastMsg
 5. All in one (WIP)        
    http://Node-IP:3000/WeatherForecastAll
