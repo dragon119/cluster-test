@@ -12,13 +12,13 @@ This is a simple .NET WebAPI application to validate our k8s clusters.
 8. Apply Service-node-port.yaml
 
 # Usage
-1. Basic test for validating LB, namespace, RBAC, Network policy, JFrog etc.Will include Vault access.       
+1. Basic test for validating LB, namespace, RBAC, Network policy, JFrog etc.Will include Vault access.         
   htttp://Node-IP:30000/WeatherForecast
-2. Invoke external API (http://api.weatherapi.com) for validating proxy setting   
+2. Invoke external API (http://api.weatherapi.com) for validating proxy setting    
   htttp://Node-IP:3000/WeatherForecastApi
-3. Access DB ( Get list of tables from postgres DB) 
+3. Access DB ( Get list of tables from postgres DB)    
    htttp://Node-IP:3000/WeatherForecastDb
-4. Access Kafka (Send one message to Kafka topic)
+4. Access Kafka (Send one message to Kafka topic)    
    htttp://Node-IP:3000/WeatherForecastMsg
 5. All in one (WIP)        
    http://Node-IP:3000/WeatherForecastAll
