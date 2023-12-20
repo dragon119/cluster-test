@@ -21,7 +21,6 @@ public class WeatherForecastApiController : ControllerBase
     {
     
         using var client = new HttpClient();
-        //var response =  await client.GetAsync("http://api.weatherapi.com/v1/current.json?key=eed42ae6f6814eaa9bb14944231412&q=London&aqi=no");
         var response =  await client.GetAsync(Environment.GetEnvironmentVariable("API_URL"));
         var content =   await response.Content.ReadAsStringAsync();
         return content.ToString();
