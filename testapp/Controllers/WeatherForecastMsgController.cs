@@ -24,19 +24,19 @@ namespace testapp.Controllers;
         public async Task<string> Get()
         {
 
-                const string topic = "purchases";
+                string topic = Environment.GetEnvironmentVariable("KAFKA_TOPIC");
 
                 var config = new ProducerConfig
                 {
-                        //BootstrapServers = Environment.GetEnvironmentVariable("KAFKA_BOOTSTRAP_SERVER"),
-                        BootstrapServers = "localhost:9092",
+                        BootstrapServers = Environment.GetEnvironmentVariable("KAFKA_BOOTSTRAP_SERVER"),
+                        //BootstrapServers = "localhost:9092",
                 };
 
                 using (var producer = new ProducerBuilder<Null, string>(config).Build())
                 {
-                        var result = await producer.ProduceAsync("weather", new Message<Null, string> { Value="a message" });
+                        var result = await producer.ProduceAsync(topic, new Message<Null, string> { Value="a message" });
                 }
                 //producer.Flush(TimeSpan.FromSeconds(10));
-                return "Successfully sent messages to weather topic";
+                return "Successfully sent messages to Kafka topic";
         }
 }
