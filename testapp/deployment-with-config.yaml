@@ -25,6 +25,16 @@ spec:
               configMapKeyRef:
                 name: testapp-config
                 key: api-url
+          - name: KAFKA_BOOTSTRAP_SERVER
+            valueFrom:
+              configMapKeyRef:
+                name: testapp-config
+                key: kafka-bootstrap-server
+          - name: KAFKA_TOPIC
+            valueFrom:
+              configMapKeyRef:
+                name: testapp-config
+                key: kafka-topic
         resources:
           limits:
             memory: "128Mi"
