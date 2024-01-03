@@ -21,5 +21,4 @@ This is a simple .NET WebAPI application to validate our k8s clusters.
    htttp://Node-IP:3000/WeatherForecastDb
 4. Access Kafka (Send one message to Kafka topic) for validating Kafka access       
    htttp://Node-IP:3000/WeatherForecastMsg
-5. All in one (WIP)        
-   http://Node-IP:3000/WeatherForecastAll
+
