@@ -2,7 +2,7 @@
 This is a simple .NET WebAPI application to validate our k8s clusters.
 
 # Deployment
-1. docker pull mvptest.azurecr.io/testapp:latest
+1. docker pull mvptest.azurecr.io/testapp:kfk3
 2. Push the image to JFrog
 3. Clone this repo
 4. Modify image path (one in JFrog) at deployment.yaml      
